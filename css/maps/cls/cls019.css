@@ -1,0 +1,9 @@
+
+#grd{
+	grid-template-rows: 25px repeat(3,3fr) 25px;
+	grid-template-columns: 25px repeat(12,12fr) 25px;
+}
+
+#overlay{
+	background: url(../../../img/bg-cls-019.svg) no-repeat center;
+}

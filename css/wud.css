@@ -1,0 +1,150 @@
+html {
+	font-family: 'Space Mono';
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #000000;
+	background-image: url(../img/bg-0.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0;
+	padding: 0;
+	color: #ffee00;
+}
+
+h1 {
+	font-family: 'Space Mono';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 9em;
+	letter-spacing: -3px;
+	line-height: 7vw;
+	margin: 0%;
+	padding: 0%;
+}
+
+e {
+	display: block;
+	margin-top: 1px;
+	font-size: 1em;
+	font-family: 'Space Mono';
+	font-style: italic;
+	color: #d3d3d3;
+	background: #31005f6e;
+
+	overflow: auto;
+	resize: both;
+	padding: 0.15em 2em;
+
+	transition-duration: 0.333s;
+}
+
+e:hover {
+	color: #693aeb;
+	background-color: #ffee00;
+}
+
+#chk1 {
+	color: #693aeb;
+	background-color: #ffee00;
+	border: none;
+}
+
+#R {
+	background: url(../img/cat.png) no-repeat center;
+	background-size: 70%;
+
+	z-index: 3;
+}
+
+.xblock {
+	background: url(../img/tumb.svg) no-repeat center;
+	z-index: 1;
+}
+
+.border{
+	background-color: #00ff0d13;
+ }
+
+.target {
+	background: url(../img/trgQty.svg) no-repeat center ;
+	z-index: 4;
+}
+		
+.tainer {
+	/* background: url(../img/mercury-gas.svg) no-repeat center ; */
+	background: url(../img/sfera-wud.svg) no-repeat center ;
+	z-index: 5;
+}
+
+.obtain {
+	background: url(../img/ignition-0.svg) no-repeat center ;
+	z-index: 5
+}
+
+.revers {
+	/* background: url(../img/lenz_bw.svg) no-repeat center; */
+	background: url(../img/sound_rev.svg) no-repeat center;
+	z-index: 5
+}
+
+.secret {
+	background: url(../img/golden-tuz.svg) no-repeat center;
+}
+
+#base{
+	position: absolute;
+	left: 54px; right: 54px; top: 54px; bottom: 54px;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 20% 70%;
+}
+
+#grd{
+	display: grid;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+#das{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#menu{
+	display: flex;
+	justify-content: center;
+}
+
+.diawin{
+	z-index: 7;
+	display: flex;
+	position: absolute;
+	left: 100px; right: 100px; top: 100px; bottom: 100px;
+
+	/* width: 80%; */
+	/* height: 80%; */
+	justify-content: center;
+
+	color: #cdcf47;
+	background: rgba(0, 0, 0, 0.9);
+	background-image: url(../img/bg-demo.png);
+	background-repeat: no-repeat;
+	/* background-size: 50%; */
+	background-position: center;
+	margin: 0;
+	padding: 0;
+}

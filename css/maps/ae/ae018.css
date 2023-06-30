@@ -1,0 +1,8 @@
+#grd{
+	grid-template-rows: 25px repeat(11,11fr) 25px ;
+	grid-template-columns: 25px repeat(8,8fr) 25px ;
+}
+
+#overlay{
+	background: url(../../../img/qbl.png) no-repeat center;
+}

@@ -1,0 +1,132 @@
+html {
+	font-family: 'Space Mono';
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #757575;
+	background-image: url(../img/bg-0.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: 'Space Mono';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 9em;
+	letter-spacing: -3px;
+	line-height: 7vw;
+	margin: 0%;
+	padding: 0%;
+}
+
+e {
+	display: block;
+	margin-top: 1px;
+	font-size: 1em;
+	font-family: 'Space Mono';
+	font-style: italic;
+	color: #d3d3d3;
+	background: #31005f6e;
+
+	overflow: auto;
+	resize: both;
+	padding: 0.15em 2em;
+
+	transition-duration: 0.333s;
+}
+
+e:hover {
+	color: #693aeb;
+	background-color: #ffee00;
+}
+
+#R {
+	background: url(../img/cat.png) no-repeat center;
+	z-index: 1;
+}
+
+.xblock {
+	background: url(../img/Qwd.svg) no-repeat center;
+
+}
+
+.border {
+	visibility: hidden;
+ }
+
+.target {
+	background: url(../img/trgQty.svg) no-repeat center ;
+	z-index: 2;
+	
+}
+		
+.tainer {
+			background: url(../img/mercury_gas_blue.svg) no-repeat center ;
+			z-index: 3;
+		
+		}
+
+.obtain {
+	background: url(../img/ignition-1.svg) no-repeat center ;
+	z-index: 3
+
+}
+
+.revers {
+	background: url(../img/lenz_bw.svg) no-repeat center;
+}
+
+.secret {
+	background: url(../img/Qfx.svg) no-repeat center;
+	
+}
+
+#grd{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+	display: grid;
+	grid-template-rows: 25px repeat(4,4fr) 25px ;
+	grid-template-columns: 25px repeat(4,4fr) 25px ;
+
+}
+
+#overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* background: url(../img/pok-0.svg) no-repeat center; */
+}
+
+#das{
+	display: flex;
+	justify-content: center;
+}
+
+.diawin{
+	z-index: 5;
+
+	display: flex;
+	position: absolute;
+	left: 100px; right: 100px; top: 100px; bottom: 100px;
+
+	/* width: 80%;
+	height: 80%; */
+
+	justify-content: center;
+	color: #fbff00;
+	background: rgba(0, 119, 255, 0.726);
+	background-image: url(../img/qbl.png);
+	background-repeat: no-repeat;
+	/* background-size: 50%; */
+	background-position: center;
+	margin: 0;
+	padding: 0;
+}

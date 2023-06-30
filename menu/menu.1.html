@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link href="../css/menu.css" rel="stylesheet">
+	<script src="../JS/doc.js"></script>
+	<!-- <script src="../JS/game.js"></script> -->
+</head>
+
+<body>
+	<!-- 
+		Для заголовка мы используем тег <span> , потому что <div> , как и
+любой блочный элемент, имеет скрытое свойство display:block , а
+значит, занимает ширину 100%.
+Таким образом, если мы зададим обработчик события onclick , то он
+будет срабатывать по клику на всей ширине поля.
+…тег <span> – строчный элемент, по умолчанию имеет свойство
+display: inline , который занимает ровно столько места, сколько
+занимает сам текст:
+	 -->
+		<div class="menu">
+				<span class="title">Сладости (нажми меня)!</span>
+				<ul>
+				<li>Пирожное</li>
+				<li>Пончик</li>
+				<li>Мёд</li>
+				</ul>
+				</div>
+	<script>
+	</script>
+
+
+</body>
+
+</html>
