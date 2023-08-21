@@ -1,12 +1,28 @@
 
 'use strict'
 
-//
-// const C = e => e.getAttribute('class')
-// const layer = 'trg';
+const Ort = {
+  U: { x: -1, y: 0 },
+  D: { x: +1, y: 0 },
+  L: { x: 0, y: -1 },
+  R: { x: 0, y: +1 },
+}
 
-const X = (id = 'R') => I(id).style['grid-row'] * 1
-const Y = (id = 'R') => I(id).style['grid-column'] * 1
+const Nav = {
+  ArrowUp() { Starter(Ort.U) },
+  ArrowDown() { Starter(Ort.D) },
+  ArrowLeft() { Starter(Ort.L) },
+  ArrowRight() { Starter(Ort.R) },
+};
+
+const go = eve => { try { Nav[eve.key]() } catch (ero) { } };
+// const go = eve => {try {Nav[eve.key]()} catch (ero) {a(`catch ${eve.key}` + ero)} }
+
+//
+// const Vmod = L => {L.x + V.x, L.y + V.y}
+
+const X = (clsN = '.player') => d.querySelector(clsN).style['grid-row'] * 1;
+const Y = (clsN = '.player') => d.querySelector(clsN).style['grid-column'] * 1;
 
 //------------------
 function win() {
@@ -15,156 +31,226 @@ function win() {
   d.head.appendChild(sht)
 }
 //------------------
-const getElem = L_ => N(`${L_.x} / ${L_.y}`)
-const gettrgElem = (L_, layer) => N(`${layer} ${L_.x} / ${L_.y}`)
+const E = L => I(`_${L.x}_${L.y}`)
+const T = L => I(`trg_${L.x}_${L.y}`)
 
 const Targets = d.querySelectorAll('.target')
 const Obtain = d.querySelectorAll('.obtain')
-let T = Targets.length - Obtain.length;
+let ae = Targets.length - Obtain.length;
 
 function init() {
   resizeGrd()
   d.body.addEventListener("keydown", go);
+  window.focus();
 }
 
-function Move(e, J) {
+function SetE(e, J) {
+  // a(`J : ${Object.values(J)}`)
+  let t = T(J)
+
   e.style['grid-area'] = `${J.x} / ${J.y}`
-  e.setAttribute('name', `${J.x} / ${J.y}`);
+  e.setAttribute('id', `_${J.x}_${J.y}`);
+
+  Perekluk(e, t)
+
 }
 
-function Rec(V) {
-  const L = {x: X(), y: Y()};
-  let
-    cnt = 0,
-    pw = 1;
-
-  function Train(L_) { //move train recursivly
-    let _L = {x: L_.x - V.x, y: L_.y - V.y}
-    let e = getElem(_L)[0]
-    if (e) {
-      let trge = gettrgElem(L_, 'trg')[0]
-      //check obtain-------------
-      if (trge) {
-        if (C(trge) === 'prtoin') {
-          let O = {x: X('out'), y: Y('out')}
-          L_ = {x: O.x, y: O.y}
-        }
-
-        if (C(e) === 'tainer' && C(trge) === 'target') {
-          e.setAttribute('class', 'obtain');
-          T -= 1
-          // a(T)
-        }
-        // else if (C(e) === 'tainer' && C(trge) === 'prtoin') {
-        //   let O = {x: X('out'), y: Y('out')}
-        //   L_ = {x: O.x, y: O.y}
-
-        //   // let oute = gettrgElem(L_,'out')[0]
-        //   // a(Object.values(O))
-        // }
-      }
-      else if (!trge && C(e) === 'obtain') {
-        e.setAttribute('class', 'tainer');
-        T += 1
-        // a(T)
-
-      }
-      Move(e, L_)
-      //----------------------
+function Perekluk(e, t) {
+  if (t) {
+    if (C(e) === 'tainer' && C(t) === 'target') {
+      e.setAttribute('class', 'obtain');
+      ae -= 1
+    } else if (C(e) === 'tainer' && C(t) === 'fliper') {
+      e.setAttribute('class', 'revers');
+      // ae -= 1
+    } else if (C(e) === 'obtain' && C(t) === 'fliper') {
+      e.setAttribute('class', 'revers');
+      // ae -= 1
+    } else if (C(e) === 'revers' && C(t) === 'fliper') {
+      e.setAttribute('class', 'tainer');
+      // ae -= 1
     }
-    cnt -= 1
-    if (cnt >= 0) Train(_L)
   }
-  //--------------------------------------
-  function TrainRev(L) { //move train recursivly
-    // a(Object.values(L))
-    // a(cnt)
+  else if (!t && C(e) === 'obtain') {
+    e.setAttribute('class', 'tainer');
+    ae += 1
+  }
+}
 
-    let _L = {x: L.x - V.x, y: L.y - V.y}
-    let L_ = {x: L.x + V.x, y: L.y + V.y}
-    let e = getElem(L)[0]
-    let _e = getElem(_L)[0]
+
+let U = { x: X('.prtout'), y: Y('.prtout') }//perenosnoy?//NE NAHODIT ESLE NET v HTML
+
+function Starter(V) {
+  const L = { x: X(), y: Y() };
+  const A = { x: V.x, y: V.y };
+
+  const pw = 2; //3 move 2
+  let cnt = 0;
+  let u = false;
+  let r = false;
+
+  const O_o = L => {
+    let O = { x: U.x - L.x, y: U.y - L.y };
+    return O;
+  }
+
+  let O = { x: 0, y: 0 };
+  //--------------------------------------
+  function Trail(L) {
+    // a(`-------------------------------------`)
+    // a(`Trail(L) cnt: ${cnt}`)
+    // a(`L: ${Object.values(L)}`)
+    // a(`O: ${Object.values(O)}`)
+    // a(`V: ${Object.values(V)}`)
+    // a(`K: ${Object.values(K)}`)
+    // a(`A: ${Object.values(A)}`)
+
+    let e = E(L)
+    let t = T(L)
+    let L_
+    let _L
+
+    if (e) {
+      L_ = { x: L.x + V.x, y: L.y + V.y }
+      _L = { x: L.x - V.x, y: L.y - V.y }
+      cnt -= 1
+
+      if (r) {
+        SetE(e, _L)
+      }
+      else { SetE(e, L_) }
+    }
+
+    if (u) {
+      if (t) {
+        if (C(t) === 'prtout') {
+          V.x = O.x
+          V.y = O.y
+        }
+        else if (C(t) === 'prtoin') {
+          V.x = A.x
+          V.y = A.y
+        }
+      }
+    }
+
+    L = { x: L.x - V.x, y: L.y - V.y }
+
+    // cnt -= 1
+    // if (cnt >= 0) Trail(L)
+    if (cnt > 0) Trail(L)
+    // a(u)
+    u = false
+  }
+
+  //--------------------------------------
+
+  function Revers(L) {
+    // a(Object.values(L))
+    // a('Revers ')
+
+    let L_ = { x: L.x + V.x, y: L.y + V.y }
+    let _L = { x: L.x - V.x, y: L.y - V.y }
+    let e = E(L)
+    let _e = E(_L)
+    let e_ = E(L_)
     // a(Object.values(_L))
 
+
     if (e && !_e) {
-      // a(C(e))
-      Move(e, _L)
+      SetE(e, _L)
     }
+
     cnt -= 1
-    if (cnt >= 0) TrainRev(L_)
+    if (cnt >= 0) Revers(L_)
   }
   //--------------------------------------
+  function Fokus(L) {
 
-  // const Vmod = L => {L.x + V.x, L.y + V.y}
-
-  function Saw(L) { //looking forward recursion
-
-    let L_ = {x: L.x + V.x, y: L.y + V.y}
-    let e = getElem(L_)[0]
+    let e = E(L)
+    let t = T(L)
 
     if (e) {
-      switch (C(e)) {
 
-        case 'tainer':
-          cnt += 1
-          Saw(L_)
-          break;
+      if (C(e) === 'player') {
+        if (t) {
+          if (C(t) === 'prtoin') {
+            O = O_o(L)
+            V.x = O.x
+            V.y = O.y
+            u = true
 
-        case 'obtain':
-          cnt += 1
-          Saw(L_)
-          break;
-
-        case 'revers':
-          cnt += 1
-          TrainRev(L)
-          break;
-
-        case 'prtoin':
-          cnt += 1
-          //create GAP betwin portals
-          a('sdfasdf')
-          a(C(e))
-          // let O = {x: X('out'), y: Y('out')}
-          // L_ = {x: O.x, y: O.y}
-
-          break;
-
-        default:
-          break;
+          } else if (C(t) === 'prtout') {
+            V.x = A.x
+            V.y = A.y
+          }
+        }
+        cnt += 1
+        L = { x: L.x + V.x, y: L.y + V.y }
+        Fokus(L)
       }
-    }
-    else {
+      else if (C(e) === 'tainer' || C(e) === 'obtain') {
+        if (t) {
+          if (C(t) === 'prtoin') {
+            O = O_o(L)
+            V.x = O.x
+            V.y = O.y
+            u = true
+
+          }
+          if (C(t) === 'prtout') {
+            V.x = A.x
+            V.y = A.y
+          }
+        }
+        cnt += 1
+        L = { x: L.x + V.x, y: L.y + V.y }
+        Fokus(L)
+      }
+
+      else if (C(e) === 'revers') {
+        // a(cnt)
+        if (t) {
+          // if (C(t) === 'prtoin') {
+          //   O = O_o(L)
+          //   V.x = O.x
+          //   V.y = O.y
+          //   u = true
+
+          // } else 
+          if (C(t) === 'prtout') {
+            V.x = A.x
+            V.y = A.y
+          }
+        }
+        // r = true
+        // cnt += 1
+        // L = {x: L.x + V.x, y: L.y + V.y}
+        // Fokus(L)
+        L = { x: L.x - V.x, y: L.y - V.y }
+
+        // a(Object.values(L))
+        if (!u && cnt <= 1) {//3aplatka! futur power problem!//block prt!!
+
+          Revers(L)
+        }
+      }
+    } else {
       if (pw >= cnt) {
-        Train(L_)
+        Trail(L)
+      } else {
+        // a('end')
+        u = false
+        V.x = A.x
+        V.y = A.y
       }
     }
   }
 
-  Saw(L)
-  T === 0 ? win() : false;
+  Fokus(L)
+  ae === 0 ? win() : false;
 
 }
 //------------------------------------------
-const Ort = {
-  U: {x: -1, y: 0},
-  D: {x: +1, y: 0},
-  L: {x: 0, y: -1},
-  R: {x: 0, y: +1},
-}
-/* const Ort = {
-  L: {x: -1, y: 0},
-  R: {x: +1, y: 0},
-  D: {x: 0, y: -1},
-  U: {x: 0, y: +1},
-} */
-const orient = {
-  ArrowUp() {Rec(Ort.U)},
-  ArrowDown() {Rec(Ort.D)},
-  ArrowLeft() {Rec(Ort.L)},
-  ArrowRight() {Rec(Ort.R)},
-}
 
-const go = eve => {try {orient[eve.key]()} catch (ero) {} }
-// const go = eve => {try {orient[eve.key]()} catch (ero) {a(`catch ${eve.key}` + ero)} }
 

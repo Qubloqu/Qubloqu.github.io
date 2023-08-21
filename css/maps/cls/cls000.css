@@ -1,7 +1,10 @@
 
 #grd{
-	grid-template-rows: 25px repeat(6,6fr) 25px ;
-	grid-template-columns: 25px repeat(5,5fr) 25px ;
+	grid-template-rows: 25px repeat(11,11fr) 25px ;
+	grid-template-columns: 25px repeat(20,20fr) 25px ;
+	background: url(../../../img/help.png) no-repeat;
+	background-size: 100%;
+
 }
 
 #overlay{

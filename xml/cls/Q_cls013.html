@@ -20,139 +20,84 @@
   }
 </style>
 
-<body onload="init()">
-  <div id="base">
-      <div id="menu">
-          <div class="nav">
-            <a href="../ae/Q_ae000.html">L00</a>
-            <a href="../ae/Q_ae001.html">L01</a>
-            <a href="../ae/Q_ae002.html">L02</a>
-            <a href="../ae/Q_ae003.html">L03</a>
-            <a href="../ae/Q_ae004.html">L04</a>
-            <a href="../ae/Q_ae005.html">L05</a>
-            <a href="../ae/Q_ae006.html">L06</a>
-            <a href="../ae/Q_ae007.html">L07</a>
-            <a href="../ae/Q_ae008.html">L08</a>
-            <a href="../ae/Q_ae009.html">L09</a>
-            <a href="../ae/Q_ae010.html">L10</a>
-            <a href="../ae/Q_ae011.html">L11</a>
-            <a href="../ae/Q_ae012.html">L12</a>
-            <a href="../ae/Q_ae013.html">L13</a>
-            <a href="../ae/Q_ae014.html">L14</a>
-            <a href="../ae/Q_ae015.html">L15</a>
-            <a href="../ae/Q_ae016.html">L16</a>
-            <a href="../ae/Q_ae017.html">L17</a>
-            <a href="../ae/Q_ae018.html">L18</a>
-            <a href="../ae/Q_ae019.html">L19</a>
-            <a href="../ae/Q_ae020.html">L20</a>
-          </div>
-          <label class="lbl">
-            <input type="checkbox" id="chk1" onchange="brdrView(1)">
-            <span class="mrk"></span>
-          </label>
-          <div class="nav">
-            <a href="../cls/Q_cls000.html">L00</a>
-            <a href="../cls/Q_cls001.html">L01</a>
-            <a href="../cls/Q_cls002.html">L02</a>
-            <a href="../cls/Q_cls003.html">L03</a>
-            <a href="../cls/Q_cls004.html">L04</a>
-            <a href="../cls/Q_cls005.html">L05</a>
-            <a href="../cls/Q_cls006.html">L06</a>
-            <a href="../cls/Q_cls007.html">L07</a>
-            <a href="../cls/Q_cls008.html">L08</a>
-            <a href="../cls/Q_cls009.html">L09</a>
-            <a href="../cls/Q_cls010.html">L10</a>
-            <a href="../cls/Q_cls011.html">L11</a>
-            <a href="../cls/Q_cls012.html">L12</a>
-            <a href="../cls/Q_cls013.html">L13</a>
-            <a href="../cls/Q_cls014.html">L14</a>
-            <a href="../cls/Q_cls015.html">L15</a>
-            <a href="../cls/Q_cls016.html">L16</a>
-            <a href="../cls/Q_cls017.html">L17</a>
-            <a href="../cls/Q_cls018.html">L18</a>
-            <a href="../cls/Q_cls019.html">L19</a>
-            <a href="../cls/Q_cls020.html">L20</a>
-          </div>
-      </div>
-    <div id="das">
-      <div id="grd">
-        <div class="secret" style="grid-area: 9 / 3;" name="9 / 3"></div>
-        <div class="border" style="grid-area: 11 / 3;" name="11 / 3"></div>
-        <div class="xblock" style="grid-area: 9 / 4;" name="9 / 4"></div>
-        <div class="xblock" style="grid-area: 9 / 5;" name="9 / 5"></div>
-        <div class="xblock" style="grid-area: 9 / 6;" name="9 / 6"></div>
-        <div class="border" style="grid-area: 11 / 2;" name="11 / 2"></div>
-        <div class="border" style="grid-area: 11 / 4;" name="11 / 4"></div>
-        <div class="border" style="grid-area: 11 / 5;" name="11 / 5"></div>
-        <div class="border" style="grid-area: 11 / 6;" name="11 / 6"></div>
-        <div class="border" style="grid-area: 11 / 7;" name="11 / 7"></div>
-        <div class="xblock" style="grid-area: 8 / 3;" name="8 / 3"></div>
-        <div class="xblock" style="grid-area: 8 / 2;" name="8 / 2"></div>
-        <div class="xblock" style="grid-area: 7 / 3;" name="7 / 3"></div>
-        <div class="xblock" style="grid-area: 7 / 2;" name="7 / 2"></div>
-        <div class="xblock" style="grid-area: 6 / 2;" name="6 / 2"></div>
-        <div class="xblock" style="grid-area: 5 / 2;" name="5 / 2"></div>
-        <div class="border" style="grid-area: 11 / 8;" name="11 / 8"></div>
-        <div class="xblock" style="grid-area: 10 / 9;" name="10 / 9"></div>
-        <div class="xblock" style="grid-area: 9 / 8;" name="9 / 8"></div>
-        <div class="tainer" style="grid-area: 4 / 8;" name="4 / 8"></div>
-        <div class="target" style="grid-area: 6 / 9;" name="trg 6 / 9"></div>
-        <div class="target" style="grid-area: 8 / 8;" name="trg 8 / 8"></div>
-        <div class="target" style="grid-area: 6 / 8;" name="trg 6 / 8"></div>
-        <div class="target" style="grid-area: 7 / 9;" name="trg 7 / 9"></div>
-        <div class="target" style="grid-area: 7 / 8;" name="trg 7 / 8"></div>
-        <div class="target" style="grid-area: 7 / 7;" name="trg 7 / 7"></div>
-        <div class="border" style="grid-area: 9 / 10;" name="9 / 10"></div>
-        <div class="border" style="grid-area: 8 / 10;" name="8 / 10"></div>
-        <div class="border" style="grid-area: 7 / 10;" name="7 / 10"></div>
-        <div class="border" style="grid-area: 6 / 10;" name="6 / 10"></div>
-        <div class="border" style="grid-area: 2 / 10;" name="2 / 10"></div>
-        <div class="border" style="grid-area: 3 / 10;" name="3 / 10"></div>
-        <div class="border" style="grid-area: 4 / 10;" name="4 / 10"></div>
-        <div class="xblock" style="grid-area: 5 / 9;" name="5 / 9"></div>
-        <div class="obtain" style="grid-area: 6 / 8;" name="6 / 8"></div>
-        <div class="xblock" style="grid-area: 8 / 7;" name="8 / 7"></div>
-        <div class="tainer" style="grid-area: 7 / 6;" name="7 / 6"></div>
-        <div class="tainer" style="grid-area: 6 / 5;" name="6 / 5"></div>
-        <div class="xblock" style="grid-area: 6 / 7;" name="6 / 7"></div>
-        <div class="xblock" style="grid-area: 5 / 7;" name="5 / 7"></div>
-        <div class="tainer" style="grid-area: 5 / 6;" name="5 / 6"></div>
-        <div class="xblock" style="grid-area: 5 / 5;" name="5 / 5"></div>
-        <div class="xblock" style="grid-area: 5 / 4;" name="5 / 4"></div>
-        <div class="tainer" style="grid-area: 4 / 5;" name="4 / 5"></div>
-        <div class="xblock" style="grid-area: 3 / 5;" name="3 / 5"></div>
-        <div class="xblock" style="grid-area: 2 / 7;" name="2 / 7"></div>
-        <div class="xblock" style="grid-area: 2 / 6;" name="2 / 6"></div>
-        <div class="xblock" style="grid-area: 2 / 5;" name="2 / 5"></div>
-        <div class="xblock" style="grid-area: 2 / 4;" name="2 / 4"></div>
-        <div class="xblock" style="grid-area: 2 / 3;" name="2 / 3"></div>
-        <div class="xblock" style="grid-area: 2 / 2;" name="2 / 2"></div>
-        <div class="border" style="grid-area: 11 / 1;" name="11 / 1"></div>
-        <div class="border" style="grid-area: 10 / 1;" name="10 / 1"></div>
-        <div class="border" style="grid-area: 9 / 1;" name="9 / 1"></div>
-        <div class="border" style="grid-area: 8 / 1;" name="8 / 1"></div>
-        <div class="border" style="grid-area: 7 / 1;" name="7 / 1"></div>
-        <div class="border" style="grid-area: 6 / 1;" name="6 / 1"></div>
-        <div class="border" style="grid-area: 5 / 1;" name="5 / 1"></div>
-        <div class="border" style="grid-area: 4 / 1;" name="4 / 1"></div>
-        <div class="border" style="grid-area: 3 / 1;" name="3 / 1"></div>
-        <div class="border" style="grid-area: 2 / 1;" name="2 / 1"></div>
-        <div class="border" style="grid-area: 1 / 10;" name="1 / 10"></div>
-        <div class="border" style="grid-area: 1 / 9;" name="1 / 9"></div>
-        <div class="border" style="grid-area: 1 / 8;" name="1 / 8"></div>
-        <div class="border" style="grid-area: 1 / 7;" name="1 / 7"></div>
-        <div class="border" style="grid-area: 1 / 6;" name="1 / 6"></div>
-        <div class="border" style="grid-area: 1 / 5;" name="1 / 5"></div>
-        <div class="border" style="grid-area: 1 / 4;" name="1 / 4"></div>
-        <div class="border" style="grid-area: 1 / 3;" name="1 / 3"></div>
-        <div class="border" style="grid-area: 1 / 2;" name="1 / 2"></div>
-        <div class="border" style="grid-area: 1 / 1;" name="1 / 1"></div>
-        <div id="R" class="player" style="grid-area: 2 / 9;" name="2 / 9"></div>
-      </div>
-      <div id="overlay"></div>
-    </div>
+<body onload="init()">	<div class="bs">
+  <div class="ds">
+
+  <div id="grd">
+    <div class="secret" style="grid-area: 9 / 3;" id="_9_3"></div>
+    <div class="border" style="grid-area: 11 / 3;" id="_11_3"></div>
+    <div class="xblock" style="grid-area: 9 / 4;" id="_9_4"></div>
+    <div class="xblock" style="grid-area: 9 / 5;" id="_9_5"></div>
+    <div class="xblock" style="grid-area: 9 / 6;" id="_9_6"></div>
+    <div class="border" style="grid-area: 11 / 2;" id="_11_2"></div>
+    <div class="border" style="grid-area: 11 / 4;" id="_11_4"></div>
+    <div class="border" style="grid-area: 11 / 5;" id="_11_5"></div>
+    <div class="border" style="grid-area: 11 / 6;" id="_11_6"></div>
+    <div class="border" style="grid-area: 11 / 7;" id="_11_7"></div>
+    <div class="xblock" style="grid-area: 8 / 3;" id="_8_3"></div>
+    <div class="xblock" style="grid-area: 8 / 2;" id="_8_2"></div>
+    <div class="xblock" style="grid-area: 7 / 3;" id="_7_3"></div>
+    <div class="xblock" style="grid-area: 7 / 2;" id="_7_2"></div>
+    <div class="xblock" style="grid-area: 6 / 2;" id="_6_2"></div>
+    <div class="xblock" style="grid-area: 5 / 2;" id="_5_2"></div>
+    <div class="border" style="grid-area: 11 / 8;" id="_11_8"></div>
+    <div class="xblock" style="grid-area: 10 / 9;" id="_10_9"></div>
+    <div class="xblock" style="grid-area: 9 / 8;" id="_9_8"></div>
+    <div class="tainer" style="grid-area: 4 / 8;" id="_4_8"></div>
+    <div class="target" style="grid-area: 6 / 9;" id="trg_6_9"></div>
+    <div class="target" style="grid-area: 8 / 8;" id="trg_8_8"></div>
+    <div class="target" style="grid-area: 6 / 8;" id="trg_6_8"></div>
+    <div class="target" style="grid-area: 7 / 9;" id="trg_7_9"></div>
+    <div class="target" style="grid-area: 7 / 8;" id="trg_7_8"></div>
+    <div class="target" style="grid-area: 7 / 7;" id="trg_7_7"></div>
+    <div class="border" style="grid-area: 9 / 10;" id="_9_10"></div>
+    <div class="border" style="grid-area: 8 / 10;" id="_8_10"></div>
+    <div class="border" style="grid-area: 7 / 10;" id="_7_10"></div>
+    <div class="border" style="grid-area: 6 / 10;" id="_6_10"></div>
+    <div class="border" style="grid-area: 2 / 10;" id="_2_10"></div>
+    <div class="border" style="grid-area: 3 / 10;" id="_3_10"></div>
+    <div class="border" style="grid-area: 4 / 10;" id="_4_10"></div>
+    <div class="xblock" style="grid-area: 5 / 9;" id="_5_9"></div>
+    <div class="obtain" style="grid-area: 6 / 8;" id="_6_8"></div>
+    <div class="xblock" style="grid-area: 8 / 7;" id="_8_7"></div>
+    <div class="tainer" style="grid-area: 7 / 6;" id="_7_6"></div>
+    <div class="tainer" style="grid-area: 6 / 5;" id="_6_5"></div>
+    <div class="xblock" style="grid-area: 6 / 7;" id="_6_7"></div>
+    <div class="xblock" style="grid-area: 5 / 7;" id="_5_7"></div>
+    <div class="tainer" style="grid-area: 5 / 6;" id="_5_6"></div>
+    <div class="xblock" style="grid-area: 5 / 5;" id="_5_5"></div>
+    <div class="xblock" style="grid-area: 5 / 4;" id="_5_4"></div>
+    <div class="tainer" style="grid-area: 4 / 5;" id="_4_5"></div>
+    <div class="xblock" style="grid-area: 3 / 5;" id="_3_5"></div>
+    <div class="xblock" style="grid-area: 2 / 7;" id="_2_7"></div>
+    <div class="xblock" style="grid-area: 2 / 6;" id="_2_6"></div>
+    <div class="xblock" style="grid-area: 2 / 5;" id="_2_5"></div>
+    <div class="xblock" style="grid-area: 2 / 4;" id="_2_4"></div>
+    <div class="xblock" style="grid-area: 2 / 3;" id="_2_3"></div>
+    <div class="xblock" style="grid-area: 2 / 2;" id="_2_2"></div>
+    <div class="border" style="grid-area: 11 / 1;" id="_11_1"></div>
+    <div class="border" style="grid-area: 10 / 1;" id="_10_1"></div>
+    <div class="border" style="grid-area: 1 / 10;" id="_1_10"></div>
+    <div class="border" style="grid-area: 9 / 1;" id="_9_1"></div>
+    <div class="border" style="grid-area: 8 / 1;" id="_8_1"></div>
+    <div class="border" style="grid-area: 7 / 1;" id="_7_1"></div>
+    <div class="border" style="grid-area: 6 / 1;" id="_6_1"></div>
+    <div class="border" style="grid-area: 5 / 1;" id="_5_1"></div>
+    <div class="border" style="grid-area: 4 / 1;" id="_4_1"></div>
+    <div class="border" style="grid-area: 3 / 1;" id="_3_1"></div>
+    <div class="border" style="grid-area: 2 / 1;" id="_2_1"></div>
+    <div class="border" style="grid-area: 1 / 9;" id="_1_9"></div>
+    <div class="border" style="grid-area: 1 / 8;" id="_1_8"></div>
+    <div class="border" style="grid-area: 1 / 7;" id="_1_7"></div>
+    <div class="border" style="grid-area: 1 / 6;" id="_1_6"></div>
+    <div class="border" style="grid-area: 1 / 5;" id="_1_5"></div>
+    <div class="border" style="grid-area: 1 / 4;" id="_1_4"></div>
+    <div class="border" style="grid-area: 1 / 3;" id="_1_3"></div>
+    <div class="border" style="grid-area: 1 / 2;" id="_1_2"></div>
+    <div class="border" style="grid-area: 1 / 1;" id="_1_1"></div>
+    <div class="player" style="grid-area: 2 / 9;" id="_2_9"></div>
   </div>
-  </div>
+  <div id="overlay"></div>
 </body>
 
 </html>
