@@ -4,6 +4,7 @@ function resizeGrd() {
   let str_clmn = getComputedStyle(grd)['grid-template-columns']
   let str_rws = getComputedStyle(grd)['grid-template-rows']
   // a(str_rws)
+  // a(str_clmn)
   let Xlen = str_clmn.match(/px/g).length-2
   let Ylen = str_rws.match(/px/g).length-2
 
