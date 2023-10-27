@@ -1,6 +1,6 @@
 #grd{
-	grid-template-rows: 25px repeat(11,11fr) 25px ;
-	grid-template-columns: 25px repeat(10,10fr) 25px ;
+	grid-template-rows:  var(--brdwght)  repeat(11,11fr)  var(--brdwght)  ;
+	grid-template-columns:  var(--brdwght)  repeat(10,10fr)  var(--brdwght)  ;
 }
 
 #overlay{

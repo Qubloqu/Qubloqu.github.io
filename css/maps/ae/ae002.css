@@ -1,9 +1,21 @@
+:root {
+	--brdclr: rgba(51, 51, 102, 0.8);
 
-#grd{
-	grid-template-rows: 25px repeat(5,5fr) 25px ;
-	grid-template-columns: 25px repeat(8,8fr) 25px ;
+	--aura01clr: rgba(255, 255, 102, 0.8);
+	--aura02clr: rgba(51, 204, 153, 0.8);
+	--aura03clr: rgba(204, 51, 102, 0.8);
+	/* --aura04clr: rgba(204, 51, 51, 0.8); */
+
+	--clol01_deg: 020deg;
+	--clol02_deg: 130deg;
+	--clol03_deg: 300deg;
+	/* --clol04_deg: 320deg; */
+}
+#grd {
+	grid-template-rows: 1fr var(--brdwght) 1fr 1fr 1fr 1fr 1fr var(--brdwght) 1fr;
+	grid-template-columns: 1fr var(--brdwght) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--brdwght) 1fr;
 }
 
-#overlay{
+#overlay {
 	background: url(../../../img/ae-002.svg) no-repeat center;
 }

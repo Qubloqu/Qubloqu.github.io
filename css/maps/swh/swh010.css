@@ -1,0 +1,22 @@
+:root {
+	--brdclr: rgb(51, 51, 51);
+
+	--aura04clr: rgb(51, 51, 102);
+	--aura03clr: rgb(102, 51, 102);
+	/* --aura02clr: rgb(0, 0, 0); */
+	--aura01clr: rgb(102, 102, 51);
+
+	--clol04_deg: 240deg;
+	--clol03_deg: 300deg;
+	/* --clol02_deg: 0deg; */
+	--clol01_deg: 60deg;
+}
+
+#grd {
+	grid-template-rows: 1fr var(--brdwght) 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--brdwght) 1fr;
+	grid-template-columns: 1fr var(--brdwght) 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--brdwght) 1fr;
+}
+
+#overlay {
+	background: url(../../../img/qbl.png) no-repeat center;
+}

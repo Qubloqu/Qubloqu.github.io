@@ -1,7 +1,7 @@
 
 #grd{
-	grid-template-rows: 25px repeat(5,5fr) 25px ;
-	grid-template-columns: 25px repeat(6,6fr) 25px ;
+	grid-template-rows:  var(--brdwght)  repeat(5,5fr)  var(--brdwght)  ;
+	grid-template-columns:  var(--brdwght)  repeat(6,6fr)  var(--brdwght)  ;
 }
 
 #overlay{

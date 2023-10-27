@@ -1,8 +1,22 @@
-#grd{
-	grid-template-rows: 25px repeat(11,11fr) 25px ;
-	grid-template-columns: 25px repeat(11,11fr) 25px ;
+:root {
+	--brdclr: rgb(51, 51, 51);
+
+	--aura01clr: rgb(102, 102, 0);
+	--aura02clr: rgb(102, 102, 51);
+	--aura03clr: rgb(102, 102, 51);
+	--aura04clr: rgb(102, 102, 51);
+
+	--clol01_deg: 120deg;
+	--clol02_deg: 215deg;
+	--clol03_deg: 250deg;
+	--clol04_deg: 320deg;
 }
 
-#overlay{
+#grd {
+	grid-template-rows: 1fr var(--brdwght) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--brdwght) 1fr;
+	grid-template-columns: 1fr var(--brdwght) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--brdwght) 1fr;
+}
+
+#overlay {
 	background: url(../../../img/qbl.png) no-repeat center;
 }

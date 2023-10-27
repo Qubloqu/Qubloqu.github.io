@@ -1,9 +1,8 @@
-
-#grd{
-	grid-template-rows: 25px repeat(6,6fr) 25px ;
-	grid-template-columns: 25px repeat(7,7fr) 25px ;
+#grd {
+	grid-template-rows:  var(--brdwght)  1fr 1fr 1fr 1fr 1fr 1fr  var(--brdwght)  1fr;
+	grid-template-columns:  var(--brdwght)  1fr 1fr 1fr 1fr 1fr 1fr 1fr  var(--brdwght) ;
 }
 
-#overlay{
-	background: url(../../../img/pok-0.svg) no-repeat center;
+#overlay {
+	background: url(../../../img/qbl.png) no-repeat center;
 }
